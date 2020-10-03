@@ -813,6 +813,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b2d5a18b2586ff4bb531d5561f7ba6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverScreen: {fileID: 0}
+  winScreen: {fileID: 0}
 --- !u!4 &1443293540
 Transform:
   m_ObjectHideFlags: 0
