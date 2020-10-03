@@ -60,7 +60,7 @@ public class vThirdPersonCamera : MonoBehaviour
 
     void Start()
     {
-        Init();
+        EventManager.onPlayerInit += Init;
     }
 
     public void Init()
@@ -246,5 +246,10 @@ public class vThirdPersonCamera : MonoBehaviour
         }
 
         return hitInfo.collider && value;
+    }
+
+    private void OnDisable()
+    {
+        EventManager.onPlayerInit -= Init;
     }
 }

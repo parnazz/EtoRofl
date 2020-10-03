@@ -9,6 +9,8 @@ public class EventManager : MonoBehaviour
     public static Action<int> onDoorClose;
     public static Action<int, Transform> onEnemyAgro;
     public static Action onCollidedWithPlayer;
+    public static Action onPlayerInit;
+    public static Action onWonTheGame;
 
     public static void CallOnDoorOpen(int objectID, GameObject nextTrigger)
     {
@@ -28,5 +30,15 @@ public class EventManager : MonoBehaviour
     public static void CallOnCollidedWithPlayer()
     {
         onCollidedWithPlayer?.Invoke();
+    }
+
+    public static void CallOnPlayerInit()
+    {
+        onPlayerInit?.Invoke();
+    }
+
+    public static void CallOnWonTheGame()
+    {
+        onWonTheGame?.Invoke();
     }
 }
