@@ -11,6 +11,7 @@ public class EventManager : MonoBehaviour
     public static Action onCollidedWithPlayer;
     public static Action onPlayerInit;
     public static Action onWonTheGame;
+    public static Action onGrounded;
 
     public static void CallOnDoorOpen(int objectID, GameObject nextTrigger)
     {
@@ -40,5 +41,10 @@ public class EventManager : MonoBehaviour
     public static void CallOnWonTheGame()
     {
         onWonTheGame?.Invoke();
+    }
+
+    public static void CallOnGrounded()
+    {
+        onGrounded?.Invoke();
     }
 }
